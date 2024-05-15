@@ -1,7 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>Bobby's Blog</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.8;
+        margin: 40px;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    header {
+        text-align: center;
+        padding: 20px;
+        background-color: #3498db; /* 鲜艳的蓝色背景 */
+        color: #ffffff; /* 白色文字 */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 添加阴影 */
+    }
+    header, footer {
+        text-align: center;
+        padding: 1em;
+        background-color: #d3d3d3;
+        color: #2c3e50;
+    }
+    section {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+        color: #3498db;
+        font-size: 28px; /* 增加标题字号 */
+    }
+    p {
+        font-size: 18px; /* 增加段落字号 */
+        text-align: justify;
+    }
+    ul {
+        font-size: 18px; /* 增加列表字号 */
+    }
+    .bold {
+        font-weight: bold; /* 添加加粗样式 */
+    }
+    h1 {
+        font-size: 40px; /* 增大标题字号 */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 文字阴影 */
+    }
+    p {
+        font-size: 20px; /* 增大段落字号 */
+        margin-top: 10px;
+    }
+    .welcome {
+        font-size: 24px; /* 增大段落字号 */
+        margin-top: 10px;
+        text-align: center; /* 文本居中 */
+    }
+    .container {
+        display: flex; /* 启用Flexbox布局 */
+        align-items: flex-start; /* 垂直对齐方式 */
+        gap: 20px; /* 框体之间的间隙 */
+    }
+.text-section, .photo-section {
+    flex: 1;  /* 给两部分相同的flex值，确保平等分配容器空间 */
+    padding: 20px; /* 统一内边距确保内容对齐 */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    align-items: flex-start; /* 确保从容器的顶部开始对齐 */
+}
+
+
+
+    .text-section {
+        flex: 1; /* 文本部分占据更多空间 */
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 添加阴影效果 */
+    }
+    .photo-section {
+        flex: 1; /* 图片部分占据较少空间 */
+        max-width: 300px; /* 限制图片容器的最大宽度 */
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 添加阴影效果 */
+         display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    }
+    .bold {
+        font-weight: bold;
+    }
+    img {
+        width: 75%; /* 图片宽度自适应容器 */
+        height: auto; /* 图片高度自动调整 */
+        display: block; /* 避免图片下方出现额外空间 */
+        text-align: center;
+         height: auto; /* 自动调整高度 */
+    border-radius: 5px; /* 圆角边框 */
+    }
+</style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<header>
+    <h1>Bobby's Blog</h1>
+    <p class="welcome">Welcome to Bobby's Blog！</p>
+</header>
+
+<div class="container">
+    <div class="text-section">
+        <h2>Research Experience</h2>
+        <p>Hello, I am a graduate of <span class="bold">Taiyuan University of Technology</span>. Currently, I am pursuing a research-focused Master's in <span class="bold">Computer Science</span> at the <span class="bold">University of Auckland</span>, specializing in <span class="bold">Machine Learning and Deep Learning</span>.</p>
+        <ul>
+            <li><span class="bold">2022-2025 M.Sc. in Computer Science</span>, The University of Auckland</li>
+            <li><span class="bold">2017-2021 B.Sc. in Software Engineering</span>, Taiyuan University of Technology</li>
+        </ul>
+    </div>
+    <div class="photo-section">
+        <img src="your-photo-url.png" alt="Your Photo"> <!-- 替换 your-photo-url.jpg 为您的照片链接 -->
+    </div>
+</div>
+
+<section>
+    <h2>Current Research</h2>
+    <p>My current research focuses on <span class="bold">Sign Language Translation (SLT)</span>. This project aims to perform cross-modal translation tasks using neural networks, specifically translating sign language video frames into spoken language. The goal of my research is to fuse raw information from sign language video frames with keypoint data, and to jointly train the combined features with spoken language. Additionally, we use pretrained models to facilitate the sign language translation generation tasks.</p>
+    <p>Key aspects of my research include:</p>
+    <ul>
+        <li><span class="bold">Computer Vision:</span> Utilizing convolutional neural networks (CNNs) to process and extract features from video frames.</li>
+        <li><span class="bold">Sequence Processing:</span> Employing recurrent neural networks (RNNs), such as LSTM or GRU, to manage time-series data in sign language.</li>
+        <li><span class="bold">Cross-Modal Learning:</span> Mapping visual data and textual information to a common feature space for effective translation.</li>
+        <li><span class="bold">Translation Techniques:</span> Applying sequence-to-sequence (seq2seq) models, enhanced with attention mechanisms, to translate visual signs into coherent spoken language.</li>
+        <li><span class="bold">Pretrained Models:</span> Leveraging existing models to improve the efficiency and quality of translation tasks.</li>
+    </ul>
+    <p>My research primarily involves the application of machine learning and deep learning algorithms, particularly in the fields of image recognition and natural language processing (NLP).</p>
+</section>
+
+
+<footer>
+    <p class="welcome">Email: <a href="mailto:bpan287@aucklanduni.ac.nz">bpan287@aucklanduni.ac.nz</a></p>
+</footer>
 </body>
 </html>
